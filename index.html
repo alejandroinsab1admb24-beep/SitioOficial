@@ -34,7 +34,7 @@
       padding: 1rem 8%;
       display: flex; justify-content: space-between; align-items: center;
     }
-    .logo-container img { height: 52px; object-fit: contain; transition: transform 0.3s ease; }
+    .logo-container img { height: 50px; object-fit: contain; transition: transform 0.3s ease; }
     .logo-container img:hover { transform: scale(1.03); }
 
     nav { display: flex; align-items: center; gap: 25px; }
@@ -138,20 +138,24 @@
     .service-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.25rem; }
     .service-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* Proceso Interactivo con Iluminación */
-    .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+    /* Metodología Ampliada con Efectos Glow */
+    .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
     .step-card {
-      background: var(--white); padding: 25px 20px; border-radius: var(--radius);
-      text-align: center; border: 1px solid rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); 
+      background: var(--white); padding: 30px 25px; border-radius: var(--radius);
+      text-align: left; border: 1px solid rgba(0,0,0,0.06); border-top: 4px solid var(--secondary); 
       box-shadow: var(--shadow-sm); transition: all 0.3s ease;
+      position: relative;
     }
     .step-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent);
       border-top: 4px solid var(--accent);
-      box-shadow: 0 0 18px rgba(0, 180, 162, 0.3);
+      box-shadow: 0 10px 20px rgba(0, 180, 162, 0.15), 0 0 18px var(--glow-color);
     }
-    .step-number { font-size: 1.8rem; font-weight: 800; color: var(--secondary); opacity: 0.8; margin-bottom: 5px; }
+    .step-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+    .step-number { font-size: 1.6rem; font-weight: 800; color: var(--secondary); opacity: 0.9; }
+    .step-card h4 { font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
+    .step-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; }
 
     /* Vista Previa Portal Cliente */
     .portal-preview {
@@ -228,7 +232,8 @@
   <!-- Navegación -->
   <header>
     <div class="logo-container">
-      <img src="https://storage.googleapis.com/generative-ai-downloads/images/cc_logo.jpg" alt="Contabilidad Corporativa S.A. de C.V.">
+      <!-- Asegúrate de renombrar tu imagen a "logo.jpg" y guardarla en la misma carpeta que este HTML -->
+      <img src="logo.jpg" alt="Contabilidad Corporativa S.A. de C.V.">
     </div>
     <nav>
       <a href="#inicio">Inicio</a>
@@ -315,19 +320,60 @@
     </div>
   </section>
 
-  <!-- Proceso -->
+  <!-- Proceso / Metodología de Trabajo Ampliada -->
   <section id="nosotros">
     <div class="section-header">
       <h2>Metodología de Trabajo</h2>
       <p>Procesos estandarizados para garantizar resultados medibles.</p>
     </div>
     <div class="steps-container">
-      <div class="step-card"><div class="step-number">01</div><h4>Contacto</h4></div>
-      <div class="step-card"><div class="step-number">02</div><h4>Diagnóstico</h4></div>
-      <div class="step-card"><div class="step-number">03</div><h4>Análisis</h4></div>
-      <div class="step-card"><div class="step-number">04</div><h4>Propuesta</h4></div>
-      <div class="step-card"><div class="step-number">05</div><h4>Ejecución</h4></div>
-      <div class="step-card"><div class="step-number">06</div><h4>Seguimiento</h4></div>
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-number">01</span>
+        </div>
+        <h4>Contacto e Primer Encuentro</h4>
+        <p>Recibimos tu solicitud y realizamos una llamada inicial de toma de requerimientos para entender la naturaleza de tu empresa.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-number">02</span>
+        </div>
+        <h4>Diagnóstico Integral</h4>
+        <p>Revisamos el estado actual de tus libros contables, situación fiscal, laboral y estructura administrativa previa.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-number">03</span>
+        </div>
+        <h4>Análisis Estratégico</h4>
+        <p>Identificamos riesgos, áreas de mejora y oportunidades de optimización tributaria acorde a la normativa vigente en El Salvador.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-number">04</span>
+        </div>
+        <h4>Presentación de Propuesta</h4>
+        <p>Diseñamos un plan de trabajo a la medida con objetivos claros, tiempos de entrega detallados y esquema de servicios ajustado.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-number">05</span>
+        </div>
+        <h4>Ejecución y Normalización</h4>
+        <p>Implementamos los procesos acordados, ordenamos la contabilidad y garantizamos el cumplimiento puntual de tus impuestos.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-number">06</span>
+        </div>
+        <h4>Seguimiento Continuo</h4>
+        <p>Ofrecemos reportería mensual, auditorías periódicas y asesoría abierta para respaldar las decisiones clave de tu negocio.</p>
+      </div>
     </div>
   </section>
 
