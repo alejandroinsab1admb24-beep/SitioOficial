@@ -10,6 +10,7 @@
       --primary: #0A2540;
       --secondary: #00877A;
       --accent: #00b4a2;
+      --glow-color: rgba(0, 180, 162, 0.4);
       --text-dark: #2A323D;
       --text-muted: #697386;
       --bg-light: #F8FAFC;
@@ -33,16 +34,26 @@
       padding: 1rem 8%;
       display: flex; justify-content: space-between; align-items: center;
     }
-    header img { height: 48px; object-fit: contain; }
+    .logo-container img { height: 52px; object-fit: contain; transition: transform 0.3s ease; }
+    .logo-container img:hover { transform: scale(1.03); }
+
     nav { display: flex; align-items: center; gap: 25px; }
     nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: 0.2s; }
     nav a:hover { color: var(--secondary); }
+    
     .btn-header {
       background: var(--secondary); color: var(--white) !important;
       padding: 10px 20px; border-radius: 8px; font-weight: 600;
-      box-shadow: 0 4px 14px rgba(0, 135, 122, 0.3); transition: 0.3s;
+      box-shadow: 0 4px 14px rgba(0, 135, 122, 0.3); 
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
     }
-    .btn-header:hover { background: #006e63; transform: translateY(-1px); }
+    .btn-header:hover { 
+      background: #006e63; 
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 0 15px var(--glow-color);
+    }
 
     /* Hero Section */
     .hero {
@@ -58,16 +69,40 @@
     .hero-badge {
       display: inline-block; background: rgba(255, 255, 255, 0.1);
       padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;
-      color: var(--accent); border: 1px solid rgba(255,255,255,0.15); margin-bottom: 20px;
+      color: var(--accent); border: 1px solid rgba(0, 180, 162, 0.3); margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    .hero-badge:hover {
+      box-shadow: 0 0 12px var(--glow-color);
+      border-color: var(--accent);
     }
     .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 15px; line-height: 1.2; }
-    .hero .slogan { font-size: 1.25rem; color: #a3e6df; font-weight: 400; margin-bottom: 25px; }
+    .hero .slogan { font-size: 1.25rem; color: #a3e6df; font-weight: 400; margin-bottom: 25px; font-style: italic; }
     .hero p.desc { color: #CBD5E1; font-size: 1.1rem; margin-bottom: 40px; }
+    
     .hero-btns { display: flex; justify-content: center; gap: 15px; }
-    .btn-main { background: var(--secondary); color: var(--white); padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 20px rgba(0,135,122,0.4); transition: 0.3s; }
-    .btn-secondary { background: rgba(255,255,255,0.08); color: var(--white); padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
-    .btn-main:hover { background: var(--accent); transform: translateY(-2px); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+    .btn-main { 
+      background: var(--secondary); color: var(--white); padding: 14px 32px; 
+      border-radius: 8px; text-decoration: none; font-weight: 600; 
+      box-shadow: 0 4px 20px rgba(0,135,122,0.4); 
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    .btn-secondary { 
+      background: rgba(255,255,255,0.08); color: var(--white); padding: 14px 32px; 
+      border-radius: 8px; text-decoration: none; font-weight: 600; 
+      border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease; 
+    }
+    .btn-main:hover { 
+      background: var(--accent); 
+      transform: translateY(-2px); 
+      box-shadow: 0 0 20px var(--glow-color);
+    }
+    .btn-secondary:hover { 
+      background: rgba(255,255,255,0.15); 
+      border-color: var(--accent);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
 
     /* Layout Secciones */
     section { padding: 90px 8%; }
@@ -75,26 +110,46 @@
     .section-header h2 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
     .section-header p { color: var(--text-muted); font-size: 1rem; }
 
-    /* Tarjetas de Servicios */
+    /* Tarjetas de Servicios con Borde Iluminado */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
     .service-card {
       background: var(--white); padding: 35px; border-radius: var(--radius);
-      box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.03); transition: 0.3s; position: relative; top: 0;
+      box-shadow: var(--shadow-sm); 
+      border: 1px solid rgba(0, 0, 0, 0.06); 
+      transition: all 0.35s ease-in-out; 
+      position: relative; top: 0;
     }
-    .service-card:hover { top: -8px; box-shadow: var(--shadow-lg); border-color: rgba(0, 135, 122, 0.2); }
+    .service-card:hover {
+      top: -8px;
+      border-color: var(--accent);
+      box-shadow: 0 10px 25px -5px rgba(0, 180, 162, 0.25), 0 0 15px var(--glow-color);
+    }
     .icon-box {
       width: 50px; height: 50px; background: rgba(0, 135, 122, 0.1); color: var(--secondary);
       border-radius: 10px; display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem; margin-bottom: 20px; font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .service-card:hover .icon-box {
+      background: var(--secondary);
+      color: var(--white);
+      box-shadow: 0 0 10px var(--glow-color);
     }
     .service-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.25rem; }
     .service-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* Proceso interactivo */
+    /* Proceso Interactivo con Iluminación */
     .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
     .step-card {
       background: var(--white); padding: 25px 20px; border-radius: var(--radius);
-      text-align: center; border-top: 4px solid var(--secondary); box-shadow: var(--shadow-sm);
+      text-align: center; border: 1px solid rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); 
+      box-shadow: var(--shadow-sm); transition: all 0.3s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      border-top: 4px solid var(--accent);
+      box-shadow: 0 0 18px rgba(0, 180, 162, 0.3);
     }
     .step-number { font-size: 1.8rem; font-weight: 800; color: var(--secondary); opacity: 0.8; margin-bottom: 5px; }
 
@@ -102,19 +157,37 @@
     .portal-preview {
       background: var(--primary); color: var(--white); border-radius: 16px;
       padding: 50px; margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .portal-preview:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 25px rgba(0, 180, 162, 0.25);
     }
     .portal-info h3 { font-size: 1.8rem; margin-bottom: 15px; }
     .portal-info p { color: #94A3B8; margin-bottom: 25px; }
     .mock-dashboard {
       background: var(--white); color: var(--text-dark); padding: 25px; border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .mock-dashboard:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 20px var(--glow-color);
     }
     .status-badge { background: #E6F4EA; color: #137333; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
 
     /* Formulario de Registro */
     .form-wrapper {
       background: var(--white); max-width: 700px; margin: 0 auto; padding: 40px;
-      border-radius: var(--radius); box-shadow: var(--shadow-lg); border: 1px solid rgba(0,0,0,0.04);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg); 
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    .form-wrapper:hover {
+      border-color: rgba(0, 180, 162, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 15px var(--glow-color);
     }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .form-group { margin-bottom: 20px; }
@@ -122,16 +195,21 @@
     .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
     .form-group input, .form-group select, .form-group textarea {
       width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px;
-      font-size: 0.95rem; outline: none; transition: 0.2s;
+      font-size: 0.95rem; outline: none; transition: all 0.3s ease;
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(0, 135, 122, 0.15);
+      border-color: var(--secondary); 
+      box-shadow: 0 0 0 3px rgba(0, 135, 122, 0.15), 0 0 10px var(--glow-color);
     }
     .btn-submit {
       width: 100%; background: var(--secondary); color: var(--white); padding: 14px;
-      border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: 0.3s;
+      border: 1px solid transparent; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;
     }
-    .btn-submit:hover { background: #006e63; }
+    .btn-submit:hover { 
+      background: #006e63; 
+      border-color: var(--accent);
+      box-shadow: 0 0 18px var(--glow-color);
+    }
 
     /* Footer */
     footer { background: var(--primary); color: #94A3B8; padding: 60px 8% 30px; font-size: 0.9rem; }
@@ -140,8 +218,8 @@
     .footer-links h5 { color: var(--white); margin-bottom: 15px; }
     .footer-links ul { list-style: none; }
     .footer-links li { margin-bottom: 8px; }
-    .footer-links a { color: #94A3B8; text-decoration: none; }
-    .footer-links a:hover { color: var(--white); }
+    .footer-links a { color: #94A3B8; text-decoration: none; transition: 0.2s; }
+    .footer-links a:hover { color: var(--accent); text-shadow: 0 0 8px var(--glow-color); }
     .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
   </style>
 </head>
@@ -149,7 +227,9 @@
 
   <!-- Navegación -->
   <header>
-    <img src="logo.jpg" alt="Contabilidad Corporativa">
+    <div class="logo-container">
+      <img src="https://storage.googleapis.com/generative-ai-downloads/images/cc_logo.jpg" alt="Contabilidad Corporativa S.A. de C.V.">
+    </div>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
