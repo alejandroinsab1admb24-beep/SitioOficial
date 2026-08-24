@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contabilidad Corporativa S.A. de C.V.</title>
+  <title>Contabilidad Corporativa S.A. de C.V. - Formalización de Empresas</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -106,7 +106,7 @@
 
     /* Layout Secciones */
     section { padding: 90px 8%; }
-    .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+    .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
     .section-header h2 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
     .section-header p { color: var(--text-muted); font-size: 1rem; }
 
@@ -137,6 +137,25 @@
     }
     .service-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.25rem; }
     .service-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    /* Contenido Integrado del Informe de Formalización */
+    .info-box {
+      background: var(--white); padding: 40px; border-radius: var(--radius);
+      box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 0, 0, 0.06);
+      margin-bottom: 40px; text-align: justify;
+    }
+    .info-box p { color: var(--text-dark); margin-bottom: 15px; font-size: 1.05rem; }
+    
+    .list-container {
+      background: var(--white); padding: 35px; border-radius: var(--radius);
+      box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 0, 0, 0.06);
+      margin-bottom: 40px;
+    }
+    .custom-list { list-style: none; padding-left: 0; }
+    .custom-list li { margin-bottom: 15px; padding-left: 28px; position: relative; font-size: 1rem; color: var(--text-dark); }
+    .custom-list li::before {
+      content: "✔"; position: absolute; left: 0; top: 0; color: var(--secondary); font-weight: bold;
+    }
 
     /* Metodología Ampliada con Efectos Glow */
     .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
@@ -236,6 +255,7 @@
     </div>
     <nav>
       <a href="#inicio">Inicio</a>
+      <a href="#formalización">Formalización</a>
       <a href="#servicios">Servicios</a>
       <a href="#portal">Portal Cliente</a>
       <a href="#nosotros">Nosotros</a>
@@ -252,57 +272,105 @@
       <p class="desc">Acompañamos a emprendedores y corporaciones en El Salvador a organizar, controlar y potenciar sus finanzas de manera estratégica.</p>
       <div class="hero-btns">
         <a href="#registro" class="btn-main">Iniciar Registro</a>
-        <a href="#servicios" class="btn-secondary">Explorar Servicios</a>
+        <a href="#formalización" class="btn-secondary">Ver Guía de Formalización</a>
       </div>
     </div>
   </section>
 
+  <!-- Sección de Formalización Empresarial (Integrada) -->
+  <section id="formalización">
+    <div class="section-header">
+      <h2>FORMALIZACIÓN DE EMPRESA EN EL SALVADOR</h2>
+      <p>Marco legal, objetivos y pasos necesarios para constituir tu empresa con éxito.</p>
+    </div>
+
+    <!-- Introducción -->
+    <div class="info-box">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">INTRODUCCIÓN</h3>
+      <p>
+        La formalización de una empresa constituye un paso fundamental para consolidar cualquier proyecto comercial dentro del marco legal de El Salvador[cite: 3]. Este proceso no solo otorga identidad jurídica a la unidad económica, sino que también establece las bases organizativas necesarias para operar con transparencia y seguridad en el mercado laboral y comercial[cite: 3].
+      </p>
+    </div>
+
+    <!-- Objetivos -->
+    <div class="list-container">
+      <h3 style="color: var(--primary); margin-bottom: 20px;">OBJETIVOS DE LA FORMALIZACIÓN</h3>
+      <ul class="custom-list">
+        <li><strong>Garantizar el cumplimiento legal:</strong> Adecuar las operaciones del negocio a la normativa fiscal, mercantil y laboral vigente en el país[cite: 3].</li>
+        <li><strong>Generar confianza institucional:</strong> Fortalecer la credibilidad ante clientes, proveedores, entidades financieras y el Estado[cite: 3].</li>
+        <li><strong>Impulsar el crecimiento comercial:</strong> Permitir la participación en licitaciones públicas y el acceso a créditos bancarios o financiamientos estructurados[cite: 3].</li>
+      </ul>
+    </div>
+
+    <!-- Pasos Principales -->
+    <div class="list-container">
+      <h3 style="color: var(--primary); margin-bottom: 20px;">PASOS PRINCIPALES PARA LA FORMALIZACIÓN</h3>
+      <ul class="custom-list">
+        <li><strong>Registro de Matrícula de Comercio:</strong> Inscripción de la empresa en el Registro de Comercio del Centro Nacional de Registros (CNR).</li>
+        <li><strong>Obtención del NIT y NRC:</strong> Tramitación del Número de Identificación Tributaria y el Número de Registro de Contribuyente ante el Ministerio de Hacienda.</li>
+        <li><strong>Registro patronal:</strong> Inscripción de la empresa y los empleados en el Instituto Salvadoreño del Seguro Social (ISSS) y en las Administradoras de Fondos de Pensiones (AFP).</li>
+        <li><strong>Licencia de funcionamiento municipal:</strong> Trámite de la solvencia y permiso de operación en la alcaldía correspondiente al domicilio del negocio.</li>
+      </ul>
+    </div>
+
+    <!-- Conclusión -->
+    <div class="info-box">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">CONCLUSIÓN</h3>
+      <p>
+        La formalización de una empresa en El Salvador es un proceso esencial para desarrollar sus actividades de manera legal y organizada[cite: 3]. Al cumplir con los requisitos establecidos por la legislación, la empresa asume sus responsabilidades fiscales, comerciales y laborales, lo que fortalece la confianza de clientes, proveedores e instituciones públicas[cite: 3].
+      </p>
+      <p>
+        Asimismo, la legalización facilita el acceso a oportunidades como financiamiento, participación en procesos de contratación pública y un crecimiento sostenible dentro del marco jurídico[cite: 3]. En consecuencia, formalizar una empresa no solo mejora su credibilidad e imagen corporativa, sino que también contribuye al desarrollo económico del país al actuar de forma responsable y transparente[cite: 3].
+      </p>
+    </div>
+  </section>
+
   <!-- Servicios -->
-  <section id="servicios">
+  <section id="servicios" style="background: var(--white);">
     <div class="section-header">
       <h2>Nuestros Servicios Especializados</h2>
-      <p>Cobertura integral para mantener tus operaciones organizadas y en regla.</p>
+      <p>Cobertura integral para mantener tus operaciones organizadas y en regla[cite: 3].</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="icon-box">📊</div>
         <h3>Asesoría Contable</h3>
-        <p>Control exacto de ingresos, costos, gastos y estructura financiera diaria.</p>
+        <p>Control exacto de ingresos, costos, gastos y estructura financiera diaria[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">💰</div>
         <h3>Asesoría Tributaria</h3>
-        <p>Cumplimiento de obligaciones fiscales, optimización de impuestos y documentación legal.</p>
+        <p>Cumplimiento de obligaciones fiscales, optimización de impuestos y documentación legal[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">💼</div>
         <h3>Asesoría Financiera</h3>
-        <p>Análisis de estados contables para la toma de decisiones presupuestarias y de inversión.</p>
+        <p>Análisis de estados contables para la toma de decisiones presupuestarias y de inversión[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">📋</div>
         <h3>Asesoría Administrativa</h3>
-        <p>Estructuración de procesos internos, gestión de recursos e inventarios.</p>
+        <p>Estructuración de procesos internos, gestión de recursos e inventarios[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">⚖️</div>
         <h3>Asesoría Legal</h3>
-        <p>Respaldo jurídico en operaciones mercantiles, laborales y corporativas.</p>
+        <p>Respaldo jurídico en operaciones mercantiles, laborales y corporativas[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">📈</div>
         <h3>Estudios de Mercado</h3>
-        <p>Análisis comercial, fijación estratégica de precios y evaluación de competencias.</p>
+        <p>Análisis comercial, fijación estratégica de precios y evaluación de competencias[cite: 3].</p>
       </div>
     </div>
   </section>
 
   <!-- Simulación Portal del Cliente -->
-  <section id="portal" style="background: white;">
+  <section id="portal">
     <div class="portal-preview">
       <div class="portal-info">
         <h3>Portal Digital del Cliente</h3>
-        <p>Monitorea tus estados financieros, solicita consultas rápidas y descarga tus reportes en cualquier momento.</p>
+        <p>Monitorea tus estados financieros, solicita consultas rápidas y descarga tus reportes en cualquier momento[cite: 3].</p>
         <a href="#registro" class="btn-main">Solicitar Acceso</a>
       </div>
       <div class="mock-dashboard">
@@ -310,20 +378,20 @@
           <strong>Estado de Servicio</strong>
           <span class="status-badge">🟢 Activo</span>
         </div>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">Servicio: Asesoría Contable & Tributaria</p>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Próximo cierre fiscal: 28/08/2026</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Servicio: Asesoría Contable & Tributaria[cite: 3]</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Próximo cierre fiscal: 28/08/2026[cite: 3]</p>
         <div style="background: var(--bg-light); padding: 10px; border-radius: 6px; font-size: 0.85rem;">
-          📑 <strong>Último reporte:</strong> Balance_General_Q2.pdf
+          📑 <strong>Último reporte:</strong> Balance_General_Q2.pdf[cite: 3]
         </div>
       </div>
     </div>
   </section>
 
   <!-- Proceso / Metodología de Trabajo Ampliada -->
-  <section id="nosotros">
+  <section id="nosotros" style="background: var(--white);">
     <div class="section-header">
       <h2>Metodología de Trabajo</h2>
-      <p>Procesos estandarizados para garantizar resultados medibles.</p>
+      <p>Procesos estandarizados para garantizar resultados medibles[cite: 3].</p>
     </div>
     <div class="steps-container">
       <div class="step-card">
@@ -331,7 +399,7 @@
           <span class="step-number">01</span>
         </div>
         <h4>Contacto e Primer Encuentro</h4>
-        <p>Recibimos tu solicitud y realizamos una llamada inicial de toma de requerimientos para entender la naturaleza de tu empresa.</p>
+        <p>Recibimos tu solicitud y realizamos una llamada inicial de toma de requerimientos para entender la naturaleza de tu empresa[cite: 3].</p>
       </div>
 
       <div class="step-card">
@@ -339,7 +407,7 @@
           <span class="step-number">02</span>
         </div>
         <h4>Diagnóstico Integral</h4>
-        <p>Revisamos el estado actual de tus libros contables, situación fiscal, laboral y estructura administrativa previa.</p>
+        <p>Revisamos el estado actual de tus libros contables, situación fiscal, laboral y estructura administrativa previa[cite: 3].</p>
       </div>
 
       <div class="step-card">
@@ -347,7 +415,7 @@
           <span class="step-number">03</span>
         </div>
         <h4>Análisis Estratégico</h4>
-        <p>Identificamos riesgos, áreas de mejora y oportunidades de optimización tributaria acorde a la normativa vigente en El Salvador.</p>
+        <p>Identificamos riesgos, áreas de mejora y oportunidades de optimización tributaria acorde a la normativa vigente en El Salvador[cite: 3].</p>
       </div>
 
       <div class="step-card">
@@ -355,7 +423,7 @@
           <span class="step-number">04</span>
         </div>
         <h4>Presentación de Propuesta</h4>
-        <p>Diseñamos un plan de trabajo a la medida con objetivos claros, tiempos de entrega detallados y esquema de servicios ajustado.</p>
+        <p>Diseñamos un plan de trabajo a la medida con objetivos claros, tiempos de entrega detallados y esquema de servicios ajustado[cite: 3].</p>
       </div>
 
       <div class="step-card">
@@ -363,7 +431,7 @@
           <span class="step-number">05</span>
         </div>
         <h4>Ejecución y Normalización</h4>
-        <p>Implementamos los procesos acordados, ordenamos la contabilidad y garantizamos el cumplimiento puntual de tus impuestos.</p>
+        <p>Implementamos los procesos acordados, ordenamos la contabilidad y garantizamos el cumplimiento puntual de tus impuestos[cite: 3].</p>
       </div>
 
       <div class="step-card">
@@ -371,7 +439,7 @@
           <span class="step-number">06</span>
         </div>
         <h4>Seguimiento Continuo</h4>
-        <p>Ofrecemos reportería mensual, auditorías periódicas y asesoría abierta para respaldar las decisiones clave de tu negocio.</p>
+        <p>Ofrecemos reportería mensual, auditorías periódicas y asesoría abierta para respaldar las decisiones clave de tu negocio[cite: 3].</p>
       </div>
     </div>
   </section>
@@ -380,7 +448,7 @@
   <section id="registro">
     <div class="section-header">
       <h2>Registro de Clientes</h2>
-      <p>Déjanos tus datos para agendar una sesión inicial de diagnóstico.</p>
+      <p>Déjanos tus datos para agendar una sesión inicial de diagnóstico[cite: 3].</p>
     </div>
     <div class="form-wrapper">
       <form>
@@ -408,6 +476,7 @@
           <div class="form-group full">
             <label>Servicio de Interés Principal</label>
             <select>
+              <option>Formalización Empresarial</option>
               <option>Asesoría Contable</option>
               <option>Asesoría Tributaria</option>
               <option>Asesoría Financiera</option>
@@ -431,11 +500,12 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>Contabilidad Corporativa S.A. de C.V.</h4>
-        <p>Soluciones estratégicas para estructurar y acelerar el crecimiento empresarial.</p>
+        <p>Soluciones estratégicas para estructurar y acelerar el crecimiento empresarial[cite: 3].</p>
       </div>
       <div class="footer-links">
         <h5>Servicios</h5>
         <ul>
+          <li><a href="#formalización">Formalización</a></li>
           <li><a href="#servicios">Contable</a></li>
           <li><a href="#servicios">Tributario</a></li>
           <li><a href="#servicios">Financiero</a></li>
@@ -443,11 +513,11 @@
       </div>
       <div class="footer-links">
         <h5>Ubicación</h5>
-        <p>San Salvador, El Salvador</p>
+        <p>San Salvador, El Salvador[cite: 3]</p>
       </div>
     </div>
     <div class="copyright">
-      <p>© 2026 Contabilidad Corporativa S.A. de C.V. Todos los derechos reservados.</p>
+      <p>© 2026 Contabilidad Corporativa S.A. de C.V. Todos los derechos reservados[cite: 3].</p>
     </div>
   </footer>
 
