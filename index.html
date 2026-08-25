@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contabilidad Corporativa S.A. de C.V. - Formalización de Empresas</title>
+  <title>Contabilidad Corporativa S.A. de C.V.</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -55,7 +55,7 @@
       box-shadow: 0 0 15px var(--glow-color);
     }
 
-    /* Hero Section */
+    /* Hero Section (Inicio) */
     .hero {
       background: radial-gradient(circle at 80% 20%, #153c63 0%, var(--primary) 100%);
       color: var(--white); padding: 120px 8% 100px; position: relative; overflow: hidden;
@@ -65,16 +65,12 @@
       background: rgba(0, 135, 122, 0.15); filter: blur(100px); border-radius: 50%;
       top: -100px; right: -100px;
     }
-    .hero-container { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+    .hero-container { max-width: 850px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
     .hero-badge {
       display: inline-block; background: rgba(255, 255, 255, 0.1);
       padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;
       color: var(--accent); border: 1px solid rgba(0, 180, 162, 0.3); margin-bottom: 20px;
       transition: all 0.3s ease;
-    }
-    .hero-badge:hover {
-      box-shadow: 0 0 12px var(--glow-color);
-      border-color: var(--accent);
     }
     .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 15px; line-height: 1.2; }
     .hero .slogan { font-size: 1.25rem; color: #a3e6df; font-weight: 400; margin-bottom: 25px; font-style: italic; }
@@ -106,12 +102,18 @@
 
     /* Layout Secciones */
     section { padding: 90px 8%; }
-    .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+    .section-header { text-align: center; max-width: 750px; margin: 0 auto 60px; }
     .section-header h2 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
     .section-header p { color: var(--text-muted); font-size: 1rem; }
 
-    /* Tarjetas de Misión y Visión */
-    .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    /* Contenedores y Tarjetas */
+    .content-box {
+      background: var(--white); padding: 40px; border-radius: var(--radius);
+      box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.06);
+      margin-bottom: 40px;
+    }
+    
+    .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 40px; }
     .mv-card {
       background: var(--white); padding: 40px; border-radius: var(--radius);
       box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.06);
@@ -124,108 +126,80 @@
     }
     .mv-card h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
 
-    /* Tarjetas de Servicios con Borde Iluminado */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .service-card {
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 40px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+    .custom-card {
       background: var(--white); padding: 35px; border-radius: var(--radius);
-      box-shadow: var(--shadow-sm); 
-      border: 1px solid rgba(0, 0, 0, 0.06); 
-      transition: all 0.35s ease-in-out; 
-      position: relative; top: 0;
+      box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.35s ease-in-out;
     }
-    .service-card:hover {
-      top: -8px;
+    .custom-card:hover {
+      transform: translateY(-5px);
       border-color: var(--accent);
       box-shadow: 0 10px 25px -5px rgba(0, 180, 162, 0.25), 0 0 15px var(--glow-color);
     }
-    .icon-box {
-      width: 50px; height: 50px; background: rgba(0, 135, 122, 0.1); color: var(--secondary);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; margin-bottom: 20px; font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    .service-card:hover .icon-box {
-      background: var(--secondary);
-      color: var(--white);
-      box-shadow: 0 0 10px var(--glow-color);
-    }
-    .service-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.25rem; }
-    .service-card p { color: var(--text-muted); font-size: 0.95rem; }
+    .custom-card h3, .custom-card h4 { color: var(--primary); margin-bottom: 15px; }
 
-    /* Contenido Integrado del Informe de Formalización */
-    .info-box {
-      background: var(--white); padding: 40px; border-radius: var(--radius);
-      box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 0, 0, 0.06);
-      margin-bottom: 40px; text-align: justify;
-    }
-    .info-box p { color: var(--text-dark); margin-bottom: 15px; font-size: 1.05rem; }
-    
-    .list-container {
-      background: var(--white); padding: 35px; border-radius: var(--radius);
-      box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 0, 0, 0.06);
-      margin-bottom: 40px;
-    }
     .custom-list { list-style: none; padding-left: 0; }
     .custom-list li { margin-bottom: 15px; padding-left: 28px; position: relative; font-size: 1rem; color: var(--text-dark); }
     .custom-list li::before {
       content: "✔"; position: absolute; left: 0; top: 0; color: var(--secondary); font-weight: bold;
     }
 
-    /* Metodología Ampliada con Efectos Glow */
-    .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-    .step-card {
-      background: var(--white); padding: 30px 25px; border-radius: var(--radius);
-      text-align: left; border: 1px solid rgba(0,0,0,0.06); border-top: 4px solid var(--secondary); 
-      box-shadow: var(--shadow-sm); transition: all 0.3s ease;
-      position: relative;
+    .promise-box {
+      background: radial-gradient(circle at 50% 50%, #153c63 0%, var(--primary) 100%);
+      color: var(--white); padding: 50px; border-radius: var(--radius); text-align: center;
+      box-shadow: var(--shadow-lg); margin-top: 40px; border: 1px solid rgba(0, 180, 162, 0.3);
     }
-    .step-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      border-top: 4px solid var(--accent);
-      box-shadow: 0 10px 20px rgba(0, 180, 162, 0.15), 0 0 18px var(--glow-color);
-    }
-    .step-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
-    .step-number { font-size: 1.6rem; font-weight: 800; color: var(--secondary); opacity: 0.9; }
-    .step-card h4 { font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
-    .step-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; }
+    .promise-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--accent); }
+    .promise-box p { font-size: 1.1rem; color: #CBD5E1; max-width: 800px; margin: 0 auto 20px; }
 
-    /* Vista Previa Portal Cliente */
+    /* Servicios */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .service-card {
+      background: var(--white); padding: 35px; border-radius: var(--radius);
+      box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 0, 0, 0.06); 
+      transition: all 0.35s ease-in-out; position: relative; top: 0;
+    }
+    .service-card:hover {
+      top: -8px; border-color: var(--accent);
+      box-shadow: 0 10px 25px -5px rgba(0, 180, 162, 0.25), 0 0 15px var(--glow-color);
+    }
+    .icon-box {
+      width: 50px; height: 50px; background: rgba(0, 135, 122, 0.1); color: var(--secondary);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 20px; font-weight: bold; transition: all 0.3s ease;
+    }
+    .service-card:hover .icon-box {
+      background: var(--secondary); color: var(--white); box-shadow: 0 0 10px var(--glow-color);
+    }
+
+    /* Portal Cliente */
     .portal-preview {
       background: var(--primary); color: var(--white); border-radius: 16px;
       padding: 50px; margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;
     }
     .portal-preview:hover {
-      border-color: var(--accent);
-      box-shadow: 0 0 25px rgba(0, 180, 162, 0.25);
+      border-color: var(--accent); box-shadow: 0 0 25px rgba(0, 180, 162, 0.25);
     }
     .portal-info h3 { font-size: 1.8rem; margin-bottom: 15px; }
     .portal-info p { color: #94A3B8; margin-bottom: 25px; }
     .mock-dashboard {
       background: var(--white); color: var(--text-dark); padding: 25px; border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      border: 1px solid transparent;
-      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.3s ease;
     }
-    .mock-dashboard:hover {
-      border-color: var(--secondary);
-      box-shadow: 0 0 20px var(--glow-color);
-    }
+    .mock-dashboard:hover { border-color: var(--secondary); box-shadow: 0 0 20px var(--glow-color); }
     .status-badge { background: #E6F4EA; color: #137333; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
 
-    /* Formulario de Registro */
+    /* Formulario */
     .form-wrapper {
       background: var(--white); max-width: 700px; margin: 0 auto; padding: 40px;
-      border-radius: var(--radius); box-shadow: var(--shadow-lg); 
-      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg); border: 1px solid rgba(0,0,0,0.06);
       transition: all 0.3s ease;
     }
-    .form-wrapper:hover {
-      border-color: rgba(0, 180, 162, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 15px var(--glow-color);
-    }
+    .form-wrapper:hover { border-color: rgba(0, 180, 162, 0.3); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 15px var(--glow-color); }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .form-group { margin-bottom: 20px; }
     .form-group.full { grid-column: span 2; }
@@ -235,18 +209,13 @@
       font-size: 0.95rem; outline: none; transition: all 0.3s ease;
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: var(--secondary); 
-      box-shadow: 0 0 0 3px rgba(0, 135, 122, 0.15), 0 0 10px var(--glow-color);
+      border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(0, 135, 122, 0.15), 0 0 10px var(--glow-color);
     }
     .btn-submit {
       width: 100%; background: var(--secondary); color: var(--white); padding: 14px;
       border: 1px solid transparent; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;
     }
-    .btn-submit:hover { 
-      background: #006e63; 
-      border-color: var(--accent);
-      box-shadow: 0 0 18px var(--glow-color);
-    }
+    .btn-submit:hover { background: #006e63; border-color: var(--accent); box-shadow: 0 0 18px var(--glow-color); }
 
     /* Footer */
     footer { background: var(--primary); color: #94A3B8; padding: 60px 8% 30px; font-size: 0.9rem; }
@@ -258,6 +227,13 @@
     .footer-links a { color: #94A3B8; text-decoration: none; transition: 0.2s; }
     .footer-links a:hover { color: var(--accent); text-shadow: 0 0 8px var(--glow-color); }
     .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+
+    @media (max-width: 768px) {
+      .portal-preview { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+      header { flex-direction: column; gap: 15px; }
+    }
   </style>
 </head>
 <body>
@@ -268,34 +244,34 @@
       <img src="WhatsApp%20Image%202026-08-24%20at%2010.44.27%20AM.jpeg" alt="Contabilidad Corporativa S.A. de C.V.">
     </div>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#formalización">Formalización</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#portal">Portal Cliente</a>
+      <a href="#inicio">INICIO</a>
+      <a href="#nosotros">NOSOTROS</a>
+      <a href="#formalizacion">FORMALIZACIÓN</a>
+      <a href="#servicios">SERVICIOS</a>
+      <a href="#portal">PORTAL CLIENTE</a>
       <a href="#registro" class="btn-header">Solicitar Asesoría</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- 1. INICIO -->
   <section id="inicio" class="hero">
     <div class="hero-container">
       <span class="hero-badge">Asesoría Integral Empresarial</span>
-      <h1>Soluciones Profesionales para Hacer Crecer tu Negocio</h1>
-      <p class="slogan">"Transformando números en oportunidades."</p>
-      <p class="desc">Acompañamos a emprendedores y corporaciones en El Salvador a organizar, controlar y potenciar sus finanzas de manera estratégica.</p>
+      <h1>Contabilidad Corporativa S.A. de C.V.</h1>
+      <p class="slogan">"Más que llevar sus cuentas, queremos ayudarle a entender su negocio, tomar mejores decisiones y construir un futuro financiero más sólido."[cite: 1, 2]</p>
+      <p class="desc">Acompañamos a personas y empresas en cada etapa de su crecimiento en El Salvador a ordenar sus finanzas y tomar decisiones con mayor seguridad[cite: 1, 2].</p>
       <div class="hero-btns">
         <a href="#registro" class="btn-main">Iniciar Registro</a>
-        <a href="#formalización" class="btn-secondary">Ver Guía de Formalización</a>
+        <a href="#nosotros" class="btn-secondary">Conocer Más</a>
       </div>
     </div>
   </section>
 
-  <!-- Nosotros (Misión, Visión y Metodología de Trabajo) -->
+  <!-- 2. NOSOTROS (Posicionado de segundo lugar con toda la información solicitada) -->
   <section id="nosotros">
     <div class="section-header">
-      <h2>SOBRE NOSOTROS</h2>
-      <p>Comprometidos con el crecimiento, estabilidad y excelencia de nuestros clientes en El Salvador.</p>
+      <h2>NOSOTROS</h2>
+      <p>Su aliado estratégico en soluciones contables y financieras en El Salvador[cite: 1, 2].</p>
     </div>
 
     <!-- Misión y Visión -->
@@ -303,134 +279,174 @@
       <div class="mv-card">
         <h3>🎯 MISIÓN</h3>
         <p>
-          Ofrecer servicios de asesoría contable y financiera con altos estándares de calidad, orientados a satisfacer las necesidades de empresas y emprendedores. Nos distinguimos por brindar una atención personalizada basada en la ética, la responsabilidad y el profesionalismo, contribuyendo al desarrollo, estabilidad y crecimiento de nuestros clientes en El Salvador.
+          Ofrecer servicios de asesoría contable y financiera con altos estándares de calidad, orientados a satisfacer las necesidades de empresas y emprendedores[cite: 1, 2]. Nos distinguimos por brindar una atención personalizada basada en la ética, la responsabilidad y el profesionalismo, contribuyendo al desarrollo, estabilidad y crecimiento de nuestros clientes en El Salvador[cite: 1, 2].
         </p>
       </div>
       <div class="mv-card">
         <h3>👁️ VISIÓN</h3>
         <p>
-          Consolidarnos como uno de los despachos contables más confiables y reconocidos en El Salvador por la excelencia de nuestros servicios y el compromiso con el éxito de nuestros clientes. Aspiramos a ampliar nuestra cobertura a nivel nacional y regional, proporcionando soluciones contables innovadoras que respondan a los desafíos del entorno empresarial y generen valor para cada organización que atendemos.
+          Consolidarnos como uno de los despachos contables más confiables y reconocidos en El Salvador por la excelencia de nuestros servicios y el compromiso con el éxito de nuestros clientes[cite: 1, 2]. Aspiramos a ampliar nuestra presencia a nivel nacional y regional, proporcionando soluciones contables innovadoras que respondan a los desafíos del entorno empresarial y generen valor para cada organización que atendemos[cite: 1, 2].
         </p>
       </div>
     </div>
 
-    <!-- Metodología de Trabajo -->
-    <div style="margin-top: 40px;">
-      <div class="section-header" style="margin-bottom: 40px;">
-        <h3>Nuestra Metodología de Trabajo</h3>
-        <p>Procesos estandarizados para garantizar resultados medibles[cite: 3].</p>
+    <!-- Nuestra Historia -->
+    <div class="content-box">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">NUESTRA HISTORIA</h3>
+      <p style="margin-bottom: 15px;">
+        <strong>Contabilidad Corporativa S.A. de C.V.</strong> nace con una idea clara: la contabilidad no debe ser vista únicamente como una obligación, sino como una herramienta para tomar mejores decisiones y construir negocios sólidos[cite: 1, 2].
+      </p>
+      <p style="margin-bottom: 15px;">
+        En El Salvador, muchos emprendedores comienzan sus negocios con una gran idea, esfuerzo y deseo de salir adelante, pero en el camino se enfrentan a preguntas importantes[cite: 1, 2]:
+      </p>
+      <ul class="custom-list" style="margin-bottom: 15px;">
+        <li>¿Estoy administrando correctamente mi dinero?[cite: 1, 2]</li>
+        <li>¿Realmente estoy obteniendo ganancias?[cite: 1, 2]</li>
+        <li>¿Estoy cumpliendo correctamente con mis obligaciones?[cite: 1, 2]</li>
+        <li>¿Cómo puedo hacer crecer mi negocio?[cite: 1, 2]</li>
+        <li>¿Qué debo hacer para formalizarme?[cite: 1, 2]</li>
+      </ul>
+      <p style="margin-bottom: 15px;">
+        Es precisamente para responder a estas necesidades que surge Contabilidad Corporativa S.A. de C.V[cite: 1, 2]. Nuestro propósito es acompañar a las personas y empresas en cada etapa de su crecimiento, desde quienes tienen una idea y desean iniciar un negocio desde cero, hasta las micro, pequeñas y medianas empresas que necesitan ordenar sus finanzas, fortalecer su administración y tomar decisiones con mayor seguridad[cite: 1, 2].
+      </p>
+      <p style="margin-bottom: 15px;">
+        Creemos que detrás de cada negocio existe una historia, un esfuerzo y un sueño[cite: 1, 2]. Por eso, nuestro trabajo va más allá de registrar números: convertimos información contable y financiera en herramientas para tomar decisiones[cite: 1, 2]. Queremos que nuestros clientes conozcan realmente la situación de su negocio, identifiquen oportunidades, prevengan riesgos y tengan una base sólida para crecer[cite: 1, 2].
+      </p>
+      <p style="margin-bottom: 15px;">
+        Desde nuestros inicios, hemos asumido el compromiso de brindar un servicio basado en tres pilares fundamentales: <strong>Ética, responsabilidad y profesionalismo[cite: 1, 2].</strong>
+      </p>
+      <p style="margin-bottom: 15px;">
+        Porque entendemos que cuando un cliente confía su información financiera en nosotros, no solamente está entregando números: está poniendo en nuestras manos una parte importante de su proyecto, de su empresa y de su futuro[cite: 1, 2].
+      </p>
+      <p>
+        Por eso, en Contabilidad Corporativa S.A. de C.V. trabajamos para convertirnos en un aliado estratégico de nuestros clientes, acompañándolos en sus desafíos y contribuyendo a la estabilidad y crecimiento de sus negocios[cite: 1, 2].
+      </p>
+    </div>
+
+    <!-- ¿Quiénes somos? y ¿Qué problema solucionamos? -->
+    <div class="grid-2">
+      <div class="custom-card">
+        <h3>👥 ¿Quiénes somos?</h3>
+        <p style="margin-bottom: 15px;">
+          Somos una empresa salvadoreña especializada en asesoría contable y financiera, orientada principalmente a MIPYMES, emprendedores formales e informales y personas que desean iniciar un negocio desde cero[cite: 1, 2].
+        </p>
+        <p style="margin-bottom: 15px;">
+          Nuestro objetivo es brindar soluciones que permitan a nuestros clientes ordenar, comprender y aprovechar mejor la información de sus negocios[cite: 1, 2]. No queremos ser simplemente el despacho al que nuestros clientes recurren cuando necesitan resolver un trámite[cite: 1, 2]. Queremos ser el aliado que los acompaña a construir un negocio más ordenado, rentable y sostenible[cite: 1, 2].
+        </p>
+        <p>
+          Trabajamos de manera personalizada porque entendemos que cada negocio es diferente[cite: 1, 2]. No tiene las mismas necesidades una persona que apenas está iniciando un emprendimiento que una empresa que lleva años operando[cite: 1, 2]. Por eso, primero buscamos conocer la realidad de cada cliente y, a partir de ella, ofrecer soluciones adecuadas a sus necesidades[cite: 1, 2].
+        </p>
       </div>
-      <div class="steps-container">
-        <div class="step-card">
-          <div class="step-header">
-            <span class="step-number">01</span>
-          </div>
-          <h4>Contacto e Primer Encuentro</h4>
-          <p>Recibimos tu solicitud y realizamos una llamada inicial de toma de requerimientos para entender la naturaleza de tu empresa[cite: 3].</p>
-        </div>
 
-        <div class="step-card">
-          <div class="step-header">
-            <span class="step-number">02</span>
-          </div>
-          <h4>Diagnóstico Integral</h4>
-          <p>Revisamos el estado actual de tus libros contables, situación fiscal, laboral y estructura administrativa previa[cite: 3].</p>
-        </div>
+      <div class="custom-card">
+        <h3>⚙️ ¿Qué problema solucionamos?</h3>
+        <p style="margin-bottom: 15px;">
+          Muchas veces, un negocio puede vender mucho y aun así no saber si realmente está ganando dinero[cite: 1, 2]. Puede tener clientes, movimiento y crecimiento, pero si no existe un adecuado control contable y financiero, el propietario puede estar tomando decisiones prácticamente a ciegas[cite: 1, 2]. Ese es uno de los problemas que nosotros ayudamos a solucionar[cite: 1, 2].
+        </p>
+        <p style="margin-bottom: 15px;">
+          Ayudamos a nuestros clientes a pasar de: <br><strong>“Creo que mi negocio está funcionando”</strong><br> a: <br><strong>“Sé cómo está funcionando mi negocio porque tengo información para demostrarlo.”</strong>[cite: 1, 2]
+        </p>
+        <p>
+          Y esa diferencia es fundamental[cite: 1, 2]. Porque cuando un empresario conoce sus números, puede identificar sus costos, controlar sus gastos, evaluar sus resultados, planificar y tomar decisiones con mayor confianza[cite: 1, 2].
+        </p>
+      </div>
+    </div>
 
-        <div class="step-card">
-          <div class="step-header">
-            <span class="step-number">03</span>
-          </div>
-          <h4>Análisis Estratégico</h4>
-          <p>Identificamos riesgos, áreas de mejora y oportunidades de optimización tributaria acorde a la normativa vigente en El Salvador[cite: 3].</p>
-        </div>
+    <!-- ¿A quiénes ayudamos? -->
+    <div class="content-box">
+      <h3 style="color: var(--primary); margin-bottom: 20px;">🎯 ¿A quiénes ayudamos?</h3>
+      <p style="margin-bottom: 15px;">Nuestro servicio está dirigido a[cite: 1, 2]:</p>
+      <ul class="custom-list">
+        <li>Emprendedores que desean iniciar un negocio desde cero[cite: 1, 2].</li>
+        <li>Emprendedores informales que desean ordenar y formalizar su actividad económica[cite: 1, 2].</li>
+        <li>Emprendedores formales que necesitan fortalecer su control contable y financiero[cite: 1, 2].</li>
+        <li>Micro, pequeñas y medianas empresas que buscan mejorar la administración de sus recursos[cite: 1, 2].</li>
+        <li>Empresas que necesitan información financiera para tomar mejores decisiones[cite: 1, 2].</li>
+      </ul>
+    </div>
 
-        <div class="step-card">
-          <div class="step-header">
-            <span class="step-number">04</span>
-          </div>
-          <h4>Presentación de Propuesta</h4>
-          <p>Diseñamos un plan de trabajo a la medida con objetivos claros, tiempos de entrega detallados y esquema de servicios ajustado[cite: 3].</p>
+    <!-- ¿Qué nos diferencia? -->
+    <div style="margin-bottom: 40px;">
+      <h3 style="color: var(--primary); text-align: center; margin-bottom: 15px; font-size: 1.8rem;">✨ ¿Qué nos diferencia?</h3>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">En Contabilidad Corporativa S.A. de C.V. sabemos que nuestros clientes no buscan únicamente que alguien lleve sus registros; buscan confianza, claridad, orientación y acompañamiento[cite: 1, 2]. Por eso nos diferenciamos por[cite: 1, 2]:</p>
+      
+      <div class="grid-3">
+        <div class="custom-card">
+          <h4>🤝 Atención personalizada</h4>
+          <p>Cada cliente recibe una atención enfocada en sus necesidades particulares[cite: 1, 2].</p>
         </div>
-
-        <div class="step-card">
-          <div class="step-header">
-            <span class="step-number">05</span>
-          </div>
-          <h4>Ejecución y Normalización</h4>
-          <p>Implementamos los procesos acordados, ordenamos la contabilidad y garantizamos el cumplimiento puntual de tus impuestos[cite: 3].</p>
+        <div class="custom-card">
+          <h4>🔒 Ética y confidencialidad</h4>
+          <p>Entendemos la importancia y sensibilidad de la información contable y financiera de nuestros clientes. Por eso actuamos con responsabilidad, ética y profesionalismo[cite: 1, 2].</p>
         </div>
-
-        <div class="step-card">
-          <div class="step-header">
-            <span class="step-number">06</span>
-          </div>
-          <h4>Seguimiento Continuo</h4>
-          <p>Ofrecemos reportería mensual, auditorías periódicas y asesoría abierta para respaldar las decisiones clave de tu negocio[cite: 3].</p>
+        <div class="custom-card">
+          <h4>💡 Orientación para emprendedores</h4>
+          <p>Acompañamos a quienes desean comenzar un negocio, ayudándoles a comprender los aspectos contables y financieros que deben considerar desde el inicio[cite: 1, 2].</p>
+        </div>
+        <div class="custom-card">
+          <h4>📊 Enfoque financiero</h4>
+          <p>No nos limitamos a registrar información. Buscamos que nuestros clientes puedan comprender sus números y utilizarlos para tomar decisiones[cite: 1, 2].</p>
+        </div>
+        <div class="custom-card" style="grid-column: span 2;">
+          <h4>🚀 Acompañamiento empresarial</h4>
+          <p>Queremos construir relaciones de largo plazo con nuestros clientes, acompañándolos no solamente en sus dificultades, sino también en sus procesos de crecimiento[cite: 1, 2].</p>
         </div>
       </div>
     </div>
+
+    <!-- Promesa y Compromiso -->
+    <div class="promise-box">
+      <h3>Nuestra Promesa y Compromiso</h3>
+      <p>
+        "En Contabilidad Corporativa S.A. de C.V. nuestra promesa es sencilla: que nuestros clientes nunca tengan que enfrentar solos las decisiones contables y financieras de su negocio[cite: 1, 2]. Queremos estar presentes cuando nace una idea, cuando comienza un emprendimiento, cuando llega el momento de formalizarse, cuando el negocio empieza a crecer y cuando aparecen nuevos retos[cite: 1, 2]. Porque creemos que un negocio bien asesorado tiene mejores herramientas para crecer."[cite: 1, 2]
+      </p>
+      <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 15px;">
+        En Contabilidad Corporativa S.A. de C.V. no vemos solamente números[cite: 1, 2]. Vemos personas detrás de cada negocio[cite: 1, 2]. Vemos al emprendedor que está comenzando con un sueño, a la familia que depende de su empresa, al empresario que quiere crecer y a cada negocio como una oportunidad para generar empleo, estabilidad y desarrollo[cite: 1, 2]. Por eso, nuestro compromiso es brindar conocimiento, orientación y soluciones que permitan a nuestros clientes avanzar con mayor seguridad[cite: 1, 2].
+      </p>
+    </div>
   </section>
 
-  <!-- Sección de Formalización Empresarial -->
-  <section id="formalización" style="background: var(--white);">
+  <!-- 3. FORMALIZACIÓN -->
+  <section id="formalizacion" style="background: var(--white);">
     <div class="section-header">
-      <h2>FORMALIZACIÓN DE EMPRESA EN EL SALVADOR</h2>
-      <p>Marco legal, objetivos y pasos necesarios para constituir tu empresa con éxito.</p>
+      <h2>FORMALIZACIÓN DE EMPRESA</h2>
+      <p>Guía esencial para legalizar y estructurar su negocio en El Salvador[cite: 3].</p>
     </div>
 
-    <!-- Introducción -->
-    <div class="info-box">
-      <h3 style="color: var(--primary); margin-bottom: 15px;">INTRODUCCIÓN</h3>
-      <p>
-        La formalización de una empresa constituye un paso fundamental para consolidar cualquier proyecto comercial dentro del marco legal de El Salvador[cite: 3]. Este proceso no solo otorga identidad jurídica a la unidad económica, sino que también establece las bases organizativas necesarias para operar con transparencia y seguridad en el mercado laboral y comercial[cite: 3].
+    <div class="content-box">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">Marco Legal y Objetivos</h3>
+      <p style="margin-bottom: 15px;">
+        La formalización de una empresa constituye un paso fundamental para consolidar cualquier proyecto comercial dentro del marco legal de El Salvador[cite: 3]. Otorga identidad jurídica y establece las bases para operar con transparencia y seguridad en el mercado[cite: 3].
       </p>
-    </div>
-
-    <!-- Objetivos -->
-    <div class="list-container">
-      <h3 style="color: var(--primary); margin-bottom: 20px;">OBJETIVOS DE LA FORMALIZACIÓN</h3>
       <ul class="custom-list">
-        <li><strong>Garantizar el cumplimiento legal:</strong> Adecuar las operaciones del negocio a la normativa fiscal, mercantil y laboral vigente en el país[cite: 3].</li>
-        <li><strong>Generar confianza institucional:</strong> Fortalecer la credibilidad ante clientes, proveedores, entidades financieras y el Estado[cite: 3].</li>
-        <li><strong>Impulsar el crecimiento comercial:</strong> Permitir la participación en licitaciones públicas y el acceso a créditos bancarios o financiamientos estructurados[cite: 3].</li>
+        <li><strong>Garantizar el cumplimiento legal:</strong> Adecuar las operaciones a la normativa fiscal, mercantil y laboral vigente[cite: 3].</li>
+        <li><strong>Generar confianza institucional:</strong> Fortalecer la credibilidad ante clientes, proveedores y bancos[cite: 3].</li>
+        <li><strong>Impulsar el crecimiento comercial:</strong> Permitir la participación en licitaciones y el acceso a créditos[cite: 3].</li>
       </ul>
     </div>
 
-    <!-- Pasos Principales -->
-    <div class="list-container">
-      <h3 style="color: var(--primary); margin-bottom: 20px;">PASOS PRINCIPALES PARA LA FORMALIZACIÓN</h3>
+    <div class="content-box">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">Pasos Clave para la Formalización</h3>
       <ul class="custom-list">
-        <li><strong>Registro de Matrícula de Comercio:</strong> Inscripción de la empresa en el Registro de Comercio del Centro Nacional de Registros (CNR).</li>
-        <li><strong>Obtención del NIT y NRC:</strong> Tramitación del Número de Identificación Tributaria y el Número de Registro de Contribuyente ante el Ministerio de Hacienda.</li>
-        <li><strong>Registro patronal:</strong> Inscripción de la empresa y los empleados en el Instituto Salvadoreño del Seguro Social (ISSS) y en las Administradoras de Fondos de Pensiones (AFP).</li>
-        <li><strong>Licencia de funcionamiento municipal:</strong> Trámite de la solvencia y permiso de operación en la alcaldía correspondiente al domicilio del negocio.</li>
+        <li><strong>Inscripción en el Registro de Comercio:</strong> Matrícula de comercio e inscripción de local en el CNR.</li>
+        <li><strong>Trámite de NIT y NRC:</strong> Registro en el Ministerio de Hacienda para emisión de comprobantes fiscales.</li>
+        <li><strong>Registro Patronal:</strong> Inscripción en el ISSS y AFP para la gestión legal de empleados.</li>
+        <li><strong>Licencias Municipales:</strong> Permiso de funcionamiento ante la alcaldía correspondiente.</li>
       </ul>
-    </div>
-
-    <!-- Conclusión -->
-    <div class="info-box">
-      <h3 style="color: var(--primary); margin-bottom: 15px;">CONCLUSIÓN</h3>
-      <p>
-        La formalización de una empresa en El Salvador es un proceso esencial para desarrollar sus actividades de manera legal y organizada[cite: 3]. Al cumplir con los requisitos establecidos por la legislación, la empresa asume sus responsabilidades fiscales, comerciales y laborales, lo que fortalece la confianza de clientes, proveedores e instituciones públicas[cite: 3].
-      </p>
-      <p>
-        Asimismo, la legalización facilita el acceso a oportunidades como financiamiento, participación en procesos de contratación pública y un crecimiento sostenible dentro del marco jurídico[cite: 3]. En consecuencia, formalizar una empresa no solo mejora su credibilidad e imagen corporativa, sino que también contribuye al desarrollo económico del país al actuar de forma responsable y transparente[cite: 3].
-      </p>
     </div>
   </section>
 
-  <!-- Servicios -->
+  <!-- 4. SERVICIOS -->
   <section id="servicios">
     <div class="section-header">
-      <h2>Nuestros Servicios Especializados</h2>
-      <p>Cobertura integral para mantener tus operaciones organizadas y en regla[cite: 3].</p>
+      <h2>NUESTROS SERVICIOS</h2>
+      <p>Soluciones integrales adaptadas a la realidad de su empresa[cite: 3].</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="icon-box">📊</div>
         <h3>Asesoría Contable</h3>
-        <p>Control exacto de ingresos, costos, gastos y estructura financiera diaria[cite: 3].</p>
+        <p>Control exacto de ingresos, costos, gastos y elaboración de estados financieros[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">💰</div>
@@ -440,27 +456,27 @@
       <div class="service-card">
         <div class="icon-box">💼</div>
         <h3>Asesoría Financiera</h3>
-        <p>Análisis de estados contables para la toma de decisiones presupuestarias y de inversión[cite: 3].</p>
+        <p>Análisis de presupuestos y estados financieros para la toma de decisiones estratégicas[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">📋</div>
         <h3>Asesoría Administrativa</h3>
-        <p>Estructuración de procesos internos, gestión de recursos e inventarios[cite: 3].</p>
+        <p>Estructuración de procesos internos, organización de recursos e inventarios[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">⚖️</div>
         <h3>Asesoría Legal</h3>
-        <p>Respaldo jurídico en operaciones mercantiles, laborales y corporativas[cite: 3].</p>
+        <p>Respaldo jurídico integral en trámites mercantiles, laborales y de formalización[cite: 3].</p>
       </div>
       <div class="service-card">
         <div class="icon-box">📈</div>
         <h3>Estudios de Mercado</h3>
-        <p>Análisis comercial, fijación estratégica de precios y evaluación de competencias[cite: 3].</p>
+        <p>Análisis del entorno comercial, fijación de precios y estudio de oportunidades[cite: 3].</p>
       </div>
     </div>
   </section>
 
-  <!-- Simulación Portal del Cliente -->
+  <!-- 5. PORTAL CLIENTE -->
   <section id="portal" style="background: var(--white);">
     <div class="portal-preview">
       <div class="portal-info">
@@ -482,10 +498,10 @@
     </div>
   </section>
 
-  <!-- Formulario de Registro -->
+  <!-- 6. REGISTRO -->
   <section id="registro">
     <div class="section-header">
-      <h2>Registro de Clientes</h2>
+      <h2>REGISTRO DE CLIENTES</h2>
       <p>Déjanos tus datos para agendar una sesión inicial de diagnóstico[cite: 3].</p>
     </div>
     <div class="form-wrapper">
@@ -520,7 +536,7 @@
               <option>Asesoría Financiera</option>
               <option>Asesoría Administrativa</option>
               <option>Asesoría Legal</option>
-              <option>Asesoría de Mercado</option>
+              <option>Estudios de Mercado</option>
             </select>
           </div>
           <div class="form-group full">
@@ -538,12 +554,12 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>Contabilidad Corporativa S.A. de C.V.</h4>
-        <p>Soluciones estratégicas para estructurar y acelerar el crecimiento empresarial[cite: 3].</p>
+        <p>Más que llevar sus cuentas, queremos ayudarle a entender su negocio, tomar mejores decisiones y construir un futuro financiero más sólido[cite: 1, 2].</p>
       </div>
       <div class="footer-links">
         <h5>Servicios</h5>
         <ul>
-          <li><a href="#formalización">Formalización</a></li>
+          <li><a href="#formalizacion">Formalización</a></li>
           <li><a href="#servicios">Contable</a></li>
           <li><a href="#servicios">Tributario</a></li>
           <li><a href="#servicios">Financiero</a></li>
@@ -551,11 +567,11 @@
       </div>
       <div class="footer-links">
         <h5>Ubicación</h5>
-        <p>San Salvador, El Salvador[cite: 3]</p>
+        <p>San Salvador, El Salvador[cite: 1, 2]</p>
       </div>
     </div>
     <div class="copyright">
-      <p>© 2026 Contabilidad Corporativa S.A. de C.V. Todos los derechos reservados[cite: 3].</p>
+      <p>© 2026 Contabilidad Corporativa S.A. de C.V. Todos los derechos reservados[cite: 1, 2].</p>
     </div>
   </footer>
 
