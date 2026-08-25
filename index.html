@@ -110,6 +110,20 @@
     .section-header h2 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
     .section-header p { color: var(--text-muted); font-size: 1rem; }
 
+    /* Tarjetas de Misión y Visión */
+    .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .mv-card {
+      background: var(--white); padding: 40px; border-radius: var(--radius);
+      box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.06);
+      border-top: 5px solid var(--secondary); transition: all 0.35s ease-in-out;
+    }
+    .mv-card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--accent);
+      box-shadow: 0 10px 25px -5px rgba(0, 180, 162, 0.25), 0 0 15px var(--glow-color);
+    }
+    .mv-card h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+
     /* Tarjetas de Servicios con Borde Iluminado */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
     .service-card {
@@ -255,10 +269,10 @@
     </div>
     <nav>
       <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
       <a href="#formalización">Formalización</a>
       <a href="#servicios">Servicios</a>
       <a href="#portal">Portal Cliente</a>
-      <a href="#nosotros">Nosotros</a>
       <a href="#registro" class="btn-header">Solicitar Asesoría</a>
     </nav>
   </header>
@@ -277,8 +291,89 @@
     </div>
   </section>
 
-  <!-- Sección de Formalización Empresarial (Integrada) -->
-  <section id="formalización">
+  <!-- Nosotros (Misión, Visión y Metodología de Trabajo) -->
+  <section id="nosotros">
+    <div class="section-header">
+      <h2>SOBRE NOSOTROS</h2>
+      <p>Comprometidos con el crecimiento, estabilidad y excelencia de nuestros clientes en El Salvador.</p>
+    </div>
+
+    <!-- Misión y Visión -->
+    <div class="mv-grid">
+      <div class="mv-card">
+        <h3>🎯 MISIÓN</h3>
+        <p>
+          Ofrecer servicios de asesoría contable y financiera con altos estándares de calidad, orientados a satisfacer las necesidades de empresas y emprendedores. Nos distinguimos por brindar una atención personalizada basada en la ética, la responsabilidad y el profesionalismo, contribuyendo al desarrollo, estabilidad y crecimiento de nuestros clientes en El Salvador.
+        </p>
+      </div>
+      <div class="mv-card">
+        <h3>👁️ VISIÓN</h3>
+        <p>
+          Consolidarnos como uno de los despachos contables más confiables y reconocidos en El Salvador por la excelencia de nuestros servicios y el compromiso con el éxito de nuestros clientes. Aspiramos a ampliar nuestra cobertura a nivel nacional y regional, proporcionando soluciones contables innovadoras que respondan a los desafíos del entorno empresarial y generen valor para cada organización que atendemos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Metodología de Trabajo -->
+    <div style="margin-top: 40px;">
+      <div class="section-header" style="margin-bottom: 40px;">
+        <h3>Nuestra Metodología de Trabajo</h3>
+        <p>Procesos estandarizados para garantizar resultados medibles[cite: 3].</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">01</span>
+          </div>
+          <h4>Contacto e Primer Encuentro</h4>
+          <p>Recibimos tu solicitud y realizamos una llamada inicial de toma de requerimientos para entender la naturaleza de tu empresa[cite: 3].</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">02</span>
+          </div>
+          <h4>Diagnóstico Integral</h4>
+          <p>Revisamos el estado actual de tus libros contables, situación fiscal, laboral y estructura administrativa previa[cite: 3].</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">03</span>
+          </div>
+          <h4>Análisis Estratégico</h4>
+          <p>Identificamos riesgos, áreas de mejora y oportunidades de optimización tributaria acorde a la normativa vigente en El Salvador[cite: 3].</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">04</span>
+          </div>
+          <h4>Presentación de Propuesta</h4>
+          <p>Diseñamos un plan de trabajo a la medida con objetivos claros, tiempos de entrega detallados y esquema de servicios ajustado[cite: 3].</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">05</span>
+          </div>
+          <h4>Ejecución y Normalización</h4>
+          <p>Implementamos los procesos acordados, ordenamos la contabilidad y garantizamos el cumplimiento puntual de tus impuestos[cite: 3].</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">06</span>
+          </div>
+          <h4>Seguimiento Continuo</h4>
+          <p>Ofrecemos reportería mensual, auditorías periódicas y asesoría abierta para respaldar las decisiones clave de tu negocio[cite: 3].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Formalización Empresarial -->
+  <section id="formalización" style="background: var(--white);">
     <div class="section-header">
       <h2>FORMALIZACIÓN DE EMPRESA EN EL SALVADOR</h2>
       <p>Marco legal, objetivos y pasos necesarios para constituir tu empresa con éxito.</p>
@@ -326,7 +421,7 @@
   </section>
 
   <!-- Servicios -->
-  <section id="servicios" style="background: var(--white);">
+  <section id="servicios">
     <div class="section-header">
       <h2>Nuestros Servicios Especializados</h2>
       <p>Cobertura integral para mantener tus operaciones organizadas y en regla[cite: 3].</p>
@@ -366,7 +461,7 @@
   </section>
 
   <!-- Simulación Portal del Cliente -->
-  <section id="portal">
+  <section id="portal" style="background: var(--white);">
     <div class="portal-preview">
       <div class="portal-info">
         <h3>Portal Digital del Cliente</h3>
@@ -383,63 +478,6 @@
         <div style="background: var(--bg-light); padding: 10px; border-radius: 6px; font-size: 0.85rem;">
           📑 <strong>Último reporte:</strong> Balance_General_Q2.pdf[cite: 3]
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Proceso / Metodología de Trabajo Ampliada -->
-  <section id="nosotros" style="background: var(--white);">
-    <div class="section-header">
-      <h2>Metodología de Trabajo</h2>
-      <p>Procesos estandarizados para garantizar resultados medibles[cite: 3].</p>
-    </div>
-    <div class="steps-container">
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-number">01</span>
-        </div>
-        <h4>Contacto e Primer Encuentro</h4>
-        <p>Recibimos tu solicitud y realizamos una llamada inicial de toma de requerimientos para entender la naturaleza de tu empresa[cite: 3].</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-number">02</span>
-        </div>
-        <h4>Diagnóstico Integral</h4>
-        <p>Revisamos el estado actual de tus libros contables, situación fiscal, laboral y estructura administrativa previa[cite: 3].</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-number">03</span>
-        </div>
-        <h4>Análisis Estratégico</h4>
-        <p>Identificamos riesgos, áreas de mejora y oportunidades de optimización tributaria acorde a la normativa vigente en El Salvador[cite: 3].</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-number">04</span>
-        </div>
-        <h4>Presentación de Propuesta</h4>
-        <p>Diseñamos un plan de trabajo a la medida con objetivos claros, tiempos de entrega detallados y esquema de servicios ajustado[cite: 3].</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-number">05</span>
-        </div>
-        <h4>Ejecución y Normalización</h4>
-        <p>Implementamos los procesos acordados, ordenamos la contabilidad y garantizamos el cumplimiento puntual de tus impuestos[cite: 3].</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-header">
-          <span class="step-number">06</span>
-        </div>
-        <h4>Seguimiento Continuo</h4>
-        <p>Ofrecemos reportería mensual, auditorías periódicas y asesoría abierta para respaldar las decisiones clave de tu negocio[cite: 3].</p>
       </div>
     </div>
   </section>
