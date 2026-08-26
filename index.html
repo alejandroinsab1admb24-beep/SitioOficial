@@ -181,6 +181,7 @@
       background: var(--white); padding: 40px 30px; border-radius: var(--radius);
       box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.06);
       text-align: center; transition: all 0.35s ease-in-out; position: relative;
+      display: flex; flex-direction: column; justify-content: space-between;
     }
     .price-card:hover {
       transform: translateY(-5px); border-color: var(--accent);
@@ -534,10 +535,11 @@
   <!-- 4. SERVICIOS -->
   <section id="servicios">
     <div class="section-header">
-      <h2>NUESTROS SERVICIOS</h2>
-      <p>Soluciones integrales adaptadas a la realidad de su empresa.</p>
+      <h2>NUESTROS SERVICIOS Y PLANES</h2>
+      <p>Soluciones integrales y planes de acompañamiento adaptados a la realidad de su empresa.</p>
     </div>
 
+    <!-- Tarjetas de Áreas de Asesoría -->
     <div class="services-grid" style="margin-bottom: 60px;">
       <div class="service-card">
         <div class="icon-box">📊</div>
@@ -563,6 +565,81 @@
         <div class="icon-box">⚖️</div>
         <h3>Asesoría Legal</h3>
         <p>Respaldo jurídico integral en trámites mercantiles, laborales y de formalización.</p>
+      </div>
+    </div>
+
+    <!-- Planes de Suscripción / Acompañamiento -->
+    <div style="margin-bottom: 60px;">
+      <h3 style="color: var(--primary); text-align: center; margin-bottom: 30px; font-size: 1.8rem;">📋 PLANES DE ACOMPAÑAMIENTO</h3>
+      
+      <div class="pricing-grid">
+        <!-- Plan Emprende -->
+        <div class="price-card">
+          <div>
+            <h4 class="price-title">Plan Emprende</h4>
+            <div class="price-amount">$20.00 <span>/ mes</span></div>
+            <ul class="custom-list pricing-features">
+              <li>Diagnóstico Inicial</li>
+              <li>Capacitación Inicial</li>
+              <li>Herramienta Digital</li>
+              <li>Educación Empresarial Básica</li>
+              <li>Asesoría Contable Personalizada 1 vez al mes</li>
+            </ul>
+          </div>
+          <a href="#registro" class="btn-main" style="width: 100%; text-align: center;">Seleccionar Plan</a>
+        </div>
+
+        <!-- Plan Crece -->
+        <div class="price-card featured">
+          <div>
+            <h4 class="price-title">Plan Crece</h4>
+            <div class="price-amount">$35.00 <span>/ mes</span></div>
+            <ul class="custom-list pricing-features">
+              <li>Diagnóstico Inicial</li>
+              <li>Análisis de Información</li>
+              <li>Capacitación Inicial</li>
+              <li>Herramienta Digital</li>
+              <li>Educación Empresarial Básica</li>
+              <li>Control de Inventario</li>
+              <li>Control de Empleados</li>
+              <li>Seguimiento Continuo</li>
+              <li>Asesoría Contable Personalizada 2 veces al mes</li>
+            </ul>
+          </div>
+          <a href="#registro" class="btn-main" style="width: 100%; text-align: center;">Seleccionar Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planes Extras -->
+    <div class="extras-box">
+      <h4 style="color: var(--primary); font-size: 1.4rem; text-align: center;">✨ PLANES Y SERVICIOS EXTRAS</h4>
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.95rem;">Complementos diseñados para potenciar el crecimiento y las herramientas de su negocio.</p>
+
+      <div class="extras-grid">
+        <div class="extra-item">
+          <div>
+            <h5>🤖 Capacitación Premium Sobre la Herramienta con IA</h5>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Aprenda a sacar el máximo provecho a nuestra plataforma impulsada con IA.</p>
+          </div>
+          <div class="extra-price">$10.00</div>
+        </div>
+
+        <div class="extra-item">
+          <div>
+            <h5>👨‍💼 Asesoría Premium Personalizada</h5>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Sesión adicional enfocada exclusivamente en los retos específicos de su empresa.</p>
+          </div>
+          <div class="extra-price">$9.15</div>
+        </div>
+
+        <div class="extra-item">
+          <div>
+            <h5>🌐 Red de Networking</h5>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Conecte con otros emprendedores, aliados comerciales y oportunidades de negocio.</p>
+          </div>
+          <div class="extra-price" style="font-size: 0.95rem; color: var(--secondary);">Incluido / Consultar</div>
+        </div>
       </div>
     </div>
   </section>
