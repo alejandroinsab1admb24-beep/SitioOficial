@@ -286,7 +286,6 @@
       <a href="#nosotros">NOSOTROS</a>
       <a href="#formalizacion">FORMALIZACIÓN</a>
       <a href="#servicios">SERVICIOS</a>
-      <a href="#portal">PORTAL CLIENTE</a>
       <a href="#registro" class="btn-header">Solicitar Asesoría</a>
     </nav>
   </header>
@@ -532,7 +531,7 @@
     </div>
   </section>
 
-  <!-- 4. SERVICIOS -->
+  <!-- 4. SERVICIOS Y PLANES -->
   <section id="servicios">
     <div class="section-header">
       <h2>NUESTROS SERVICIOS Y PLANES</h2>
@@ -643,6 +642,99 @@
       </div>
     </div>
   </section>
+
+  <!-- 5. REGISTRO Y SOLICITUD DE SERVICIOS -->
+  <section id="registro" style="background: var(--bg-light);">
+    <div class="section-header">
+      <h2>REGISTRO Y CONSULTAS</h2>
+      <p>Complete sus datos para ponerse en contacto con nuestro equipo o contratar un plan de servicio.</p>
+    </div>
+
+    <div class="form-wrapper">
+      <form action="#" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" required>
+          </div>
+
+          <div class="form-group">
+            <label for="empresa">Nombre de la Empresa o Emprendimiento</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Ej. Comercial Mendoza S.A.">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+503 7000-0000" required>
+          </div>
+
+          <div class="form-group full">
+            <label for="servicio">Plan o Servicio de Interés *</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Seleccione una opción...</option>
+              <optgroup label="Planes Mensuales">
+                <option value="emprende">Plan Emprende - $20.00 / mes</option>
+                <option value="crece">Plan Crece - $35.00 / mes</option>
+              </optgroup>
+              <optgroup label="Servicios Extras">
+                <option value="capacitacion-ia">Capacitación Premium Herramienta IA - $10.00</option>
+                <option value="asesoria-premium">Asesoría Premium Personalizada - $9.15</option>
+                <option value="networking">Red de Networking</option>
+              </optgroup>
+              <optgroup label="Asesorías Específicas">
+                <option value="contable">Asesoría Contable</option>
+                <option value="tributaria">Asesoría Tributaria</option>
+                <option value="financiera">Asesoría Financiera</option>
+                <option value="formalizacion">Formalización de Empresa / Legales</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="mensaje">Detalles Adicionales o Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntenos sobre su proyecto o consulte sus dudas particulares..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Registro y Solicitar Información</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Contabilidad Corporativa S.A. de C.V.</h4>
+        <p>Soluciones contables, fiscales y administrativas adaptadas a las necesidades reales de su negocio en El Salvador.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#formalizacion">Formalización</a></li>
+          <li><a href="#servicios">Servicios y Planes</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contacto</h5>
+        <ul>
+          <li>El Salvador</li>
+          <li>info@contabilidadcorporativa.sv</li>
+          <li>+503 2000-0000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Contabilidad Corporativa S.A. de C.V. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
